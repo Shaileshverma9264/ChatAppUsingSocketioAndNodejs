@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "my first chat application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "author": "shailesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "socket.io": "^3.0.3"
+  }
+}

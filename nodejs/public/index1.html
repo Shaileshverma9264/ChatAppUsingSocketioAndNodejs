@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .sender_box_size {
+            width: 50%;
+            float: right;
+        }
+
+        .receiver_box_size {
+            width: 50%;
+        }
+
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
+
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .container img {
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .container img.right {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .time-left {
+            // float: left;
+            color: #999;
+        }
+
+        .chat_text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .form-container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 350px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var time = new Date().toLocaleTimeString();
+            $(".time-left").append(time);
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="main-block">
+        <h2><strong>Chat Messages</strong></h2>
+        <div class="container receiver_box_size">
+            <img src="user_sender.png" alt="Avatar" style="width:100%;">
+            <p class="receiver_text">Hello. How are you today?</p>
+            <span class="time-left "></span>
+
+        </div>
+
+        <div class="container darker sender_box_size">
+            <img src="user_sender.png" alt="Avatar" class="right" style="width:100%;">
+            <p class="sender_text">Hey! I'm fine. Thanks for asking!</p>
+            <span class="time-left "></span>
+        </div>
+        <div class="chat_text">
+            <form action="#" class="form-container">
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
